@@ -1,0 +1,20 @@
+{
+   "site": "myInternalNameForTheWebsite",
+   "debugging": false,
+   "caching": 30,
+   "console": true,
+   "database": {
+      "user": "",
+      "pass": "",
+      "name": "",
+      "host": "",
+      "port": ""
+   },
+   "salt": "SomeRandomSalt",
+   "url": "some-url.com",
+   "path": {
+      "temp": "cache/",
+      "view": "app/views/",
+      "model": "app/models/"
+   }
+}
