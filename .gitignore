@@ -1,4 +1,5 @@
 cache/cache.serialize.txt
 cache/smarty/*
 cache/smarty_compiled/*
+web/bower/*
 config.json
