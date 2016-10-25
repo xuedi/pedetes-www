@@ -1,15 +1,30 @@
+.debug {
+	color: #aaa;
+	z-index: -10;
+	td { padding-left: 4px; }
+}
+
 #debug_logs {
+	.debug;
 	position: absolute;
 	text-align:left;
 	top: 55px; 
 	left: 5px; 
-	color: #aaa;
+
 }
 
 #debug_time {
+	.debug;
 	position: absolute;
 	text-align:right;
 	top: 55px; 
 	right: 5px; 
-	color: #aaa;
+}
+
+body {
+	margin-top: 60px;
+}
+
+.navbar-fixed-bottom {
+	background-color: #aaa;
 }
