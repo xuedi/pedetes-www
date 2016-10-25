@@ -6,6 +6,12 @@ This install expects that you have everything in a website folder like /var/www/
 
 Of course every path can be adjusted like you with when you install manualy, for that see the install.sh as install guideline
 
+### requirements
+ - Linux / Unix
+ - PHP 7+
+ - Nginx / Apache
+ - bower (or manual assets)
+
 ### webhost (nginx)
 	upstream php {
 		server unix:/tmp/php-cgi.socket;
@@ -29,8 +35,8 @@ Of course every path can be adjusted like you with when you install manualy, for
 
 ### automatic install (bash)
 	cd /var/www/sites/newSite/
-	curl -sS https://raw.githubusercontent.com/xuedi/pedetes-www/master/install.sh
-	bash install.sh  # never trust random script
+	curl -sS https://raw.githubusercontent.com/xuedi/pedetes-www/master/install.sh | bash
+	# btw, never trust a forign remote scipt ...
 
 
 ## privacy warning
