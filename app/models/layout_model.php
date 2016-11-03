@@ -16,11 +16,18 @@ class layout_model extends \Pedetes\model {
 		$retVal['tplUserName'] = $this->mem->get('user_name');
 		$retVal['tplUserRole'] = $this->mem->get('user_role');
 
-		$i18n = $this->loadModel('i18n');
-		$retVal['tplLanguageList'] = $i18n->getLanguages($lang);
-		$retVal['tplLanguageListActive'] = $lang;
+		if($this->_hasDB()) {
+			$i18n = $this->loadModel('i18n');
+			$retVal['tplLanguageList'] = $i18n->getLanguages($lang);
+			$retVal['tplLanguageListActive'] = $lang;
+		}
 
 		return $retVal;
+	}
+
+	private function _hasDB() {
+		if(!isset($this->ctn['config']['database']['nodatabase'])||$this->ctn['config']['database']['nodatabase']) return false;
+		return true;
 	}
 
 }
