@@ -1,9 +1,12 @@
 
-</div>
-
 <div class="navbar navbar-fixed-bottom" role="navigation">
 	<div class="container">
-		Footer text here - <a href="/admin">##admin##</a>
+		Footer text here - 
+		<a href="/admin">##footer_admin##</a> - 
+		<a href="/imprint">##footer_imprint##</a> - 
+		<a href="/contact">##footer_contact##</a> - 
+		<a href="/privacy">##footer_privacy##</a> - 
+		<a href="/terms">##footer_terms##</a>
 	</div>
 </div>
 

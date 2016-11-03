@@ -2,10 +2,12 @@
 {include file='layout/navigation.tpl' active='index'}
 
 
-<h1>{$greeting}</h1>
-<p>
-	From here on you can .... smart text
-</p>
+<div class="container">
+	<h1>{$greeting}</h1>
+	<p>
+		From here on you can .... smart text
+	</p>
+</div>
 
 
 {include file='layout/bottom.tpl'}
