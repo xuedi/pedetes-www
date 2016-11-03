@@ -1,4 +1,6 @@
 
+
+{if $footer != 'no'}
 <div class="navbar navbar-fixed-bottom" role="navigation">
 	<div class="container">
 		Footer text here - 
@@ -9,6 +11,7 @@
 		<a href="/terms">##footer_terms##</a>
 	</div>
 </div>
+{/if}
 
 
 <script src="/bower/jquery/dist/jquery.min.js"></script>

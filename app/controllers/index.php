@@ -7,7 +7,6 @@ class index extends Pedetes\controller {
 	}
 
 	function indexAction() {
-		$this->view->assign('greeting', 'Hello visitor!' );
 		$this->view->render('index.tpl', true);
 	}
 

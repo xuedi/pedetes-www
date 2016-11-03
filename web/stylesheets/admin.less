@@ -1,0 +1,105 @@
+#debug_logs {
+	position: absolute;
+	text-align:left;
+	top: 55px; 
+	left: 5px; 
+	color: #aaa;
+}
+
+#debug_time {
+	position: absolute;
+	text-align:right;
+	top: 55px; 
+	right: 5px; 
+	color: #aaa;
+}
+
+#currentLanguage {
+	position: relative;
+	padding: 15px;
+	margin-right: 20px;
+}
+
+.table-clean {
+	td {
+		border-top: 0px !important;
+	}
+}
+
+.table-box {
+	border: 1px solid rgb(221, 221, 221);
+}
+
+.flag {
+	float: right;
+	width: 23px;
+	height: 15px;
+	margin-top: 3px;
+	margin-left: 4px;
+	background-position-y: 0px;
+	background-image: url('/images/flags.png');
+	&.fr { background-position-y: -15px; }
+	&.en { background-position-y: -30px; }
+	&.zh { background-position-y: -45px; }
+	&.de { background-position-y: -60px; }
+}
+
+.adminBar {
+	background-color: #eee;
+	.nav {
+		.active {
+			font-weight: bold;
+		}
+	}
+}
+
+.nic {
+	width: 100%;
+	/*height: 80px;*/
+}
+
+.nic-tall {
+	height: 160px;
+}
+
+.admin_image {
+	padding: 2px;
+	background-color: #ddd;
+	position: relative;
+	display: inline-block;
+	.delete {
+		font-size: 20px;
+		position: absolute;
+		top: 0px;
+		right: 5px;
+	}
+}
+
+.keyCombo {
+	color: black;
+	background-color: #ddd;
+	border: 1px solid #aaa;
+	border-radius: 2px;
+	padding: 1px 4px;
+}
+
+.datepicker-dropdown {
+	padding: 10px !important;
+	font-family: Helvetica, Arial, sans-serif !important;
+	.day,.next,.prev {
+		cursor: pointer;
+	}
+	.datepicker-switch {
+		text-align: center;
+	}
+}
+
+#sortable {
+	li {
+		display: inline-block;
+		width: auto;
+		padding: 8px;
+		margin: 20px;
+		background-color: #ddd;
+	}
+}

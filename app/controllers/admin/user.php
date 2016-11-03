@@ -1,7 +1,5 @@
 <?php
 
-// get needed objects
-$product = $this->loadModel('products');
 
 // do something ^_^
 $options = array('1234');

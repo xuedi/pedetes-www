@@ -3,9 +3,9 @@
 
 
 <div class="container">
-	<h1>{$greeting}</h1>
+	<h1>##headline##</h1>
 	<p>
-		From here on you can .... smart text
+		##paragraph##
 	</p>
 </div>
 

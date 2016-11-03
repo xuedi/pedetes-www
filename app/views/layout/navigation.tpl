@@ -14,7 +14,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right languageBox">
 					<li class="dropdown" >
-						<a href="/" class="dropdown-toggle" data-toggle="dropdown" data-clicked="false" onclick="location.href='/'">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-clicked="false">
 							<i class="fa fa-globe"></i> 
 							##languages## 
 							<span class="caret"></span>
@@ -22,7 +22,7 @@
 						<ul class="dropdown-menu" role="menu">
 						{section name=it loop=$tplLanguageList}
 							<li>
-								<a class="languageSwitch" id="{$tplLanguageList[it].language}" href="/fc/ajax/language?lang={$tplLanguageList[it].language}">
+								<a class="languageSwitch" id="{$tplLanguageList[it].language}" href="/ajax/language?lang={$tplLanguageList[it].language}">
 									<span class="line">
 										<span class="right">
 											{$tplLanguageList[it].native}
