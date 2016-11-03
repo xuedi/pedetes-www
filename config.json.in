@@ -1,14 +1,10 @@
 {
    "site": "myInternalNameForTheWebsite",
    "debugging": false,
-   "caching": 30,
+   "caching": 0,
    "console": true,
    "database": {
-      "user": "",
-      "pass": "",
-      "name": "",
-      "host": "",
-      "port": ""
+      "nodatabase": true
    },
    "salt": "SomeRandomSalt",
    "url": "some-url.com",
@@ -16,5 +12,6 @@
       "temp": "cache/",
       "view": "app/views/",
       "model": "app/models/"
-   }
+   },
+   "installed": false
 }
