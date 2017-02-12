@@ -1,0 +1,26 @@
+#!/bin/bash
+
+### update library composer
+cd libs/pedetes/
+git pull
+composer update
+
+### update app's bower
+cd ../../www
+git pull
+bower update
+
+### optimize CSS
+lessc web/stylesheets/admin.less web/dist/admin.css
+lessc web/stylesheets/global.less web/dist/global.css
+cat web/dist/prod.css \
+    web/dist/global.css \
+    > web/dist/prod.css
+yuicompressor web/dist/prod.css --type css -o web/dist/prod.min.css
+
+### optimized JS
+cat web/bower/jquery/dist/jquery.min.js \
+    web/bower/bootstrap/dist/js/bootstrap.min.js \
+    web/javascript/global.js \
+    > web/dist/prod.js
+yuicompressor web/dist/prod.js --type js -o web/dist/prod.min.js
