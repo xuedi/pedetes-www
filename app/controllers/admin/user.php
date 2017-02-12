@@ -3,7 +3,7 @@
 
 // do something ^_^
 $options = array('1234');
-$action = $this->request->get('action', 'ARRAY', $options, true);
+$action = $this->request->getArray('action', $options);
 switch($action) {
 
 	case '1234':

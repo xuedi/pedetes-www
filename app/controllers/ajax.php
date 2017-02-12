@@ -19,7 +19,7 @@ class ajax extends \Pedetes\controller {
 	function languageAction() {
 		$i18n = $this->loadModel('i18n');
 		$languages = $i18n->getAvailableLanguages();
-		$lang = $this->request->get('lang', 'ARRAY', $languages, false);
+		$lang = $this->request->getArray('lang', null, $languages);
 		$this->mem->set( 'language', $lang );
 		$this->ajaxResponse();
 	}
@@ -28,8 +28,8 @@ class ajax extends \Pedetes\controller {
 
 	function loginAction() {
 		$userModel = $this->loadModel('user');
-		$username = $this->request->get('username', 'PLAINTEXT');
-		$password = $this->request->get('password', 'FREE');
+		$username = $this->request->getText('username');
+		$password = $this->request->getFree('password');
 		if($userModel->login($username, $password)) {
 			$this->ajaxResponse(null,'/admin');
 		} else {

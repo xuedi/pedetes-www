@@ -6,7 +6,7 @@ $lang = $this->mem->get('language');
 
 // admin menue
 $options = array('save', 'search', 'publish', 'clean');
-$action = $this->request->get('action', 'ARRAY', $options);
+$action = $this->request->getArray('action', $options);
 switch($action) {
 
 	case 'save':
