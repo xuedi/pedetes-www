@@ -1,2 +1,2 @@
 <?php
-require '../../libs/pedetes/index.php';
+require '../../libs/pedetes/init.php';
