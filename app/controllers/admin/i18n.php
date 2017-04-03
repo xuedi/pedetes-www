@@ -2,7 +2,7 @@
 
 // used recources
 $i18n = $this->loadModel('i18n');
-$lang = $this->mem->get('language');
+$lang = $this->session->get('language');
 
 // admin menue
 $options = array('save', 'search', 'publish', 'clean');

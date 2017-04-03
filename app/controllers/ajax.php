@@ -19,8 +19,8 @@ class ajax extends \Pedetes\controller {
 	function languageAction() {
 		$i18n = $this->loadModel('i18n');
 		$languages = $i18n->getAvailableLanguages();
-		$lang = $this->request->getArray('lang', null, $languages);
-		$this->mem->set( 'language', $lang );
+		$lang = $this->request->getArray('lang', $languages);
+		$this->session->set( 'language', $lang );
 		$this->ajaxResponse();
 	}
 
@@ -40,9 +40,9 @@ class ajax extends \Pedetes\controller {
 
 
 	function logoutAction( $noJava = null ) {
-		$this->mem->set( 'user_id', "" );
-		$this->mem->set( 'user_name', "" );
-		$this->mem->set( 'user_role', "" );
+		$this->session->set( 'user_id', "" );
+		$this->session->set( 'user_name', "" );
+		$this->session->set( 'user_role', "" );
 		header("Location: /");
 	}
 

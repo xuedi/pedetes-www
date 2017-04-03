@@ -29,7 +29,7 @@ class admin extends Pedetes\controller {
 
 	// ---- 
 	private function _auth() {
-		if($this->mem->get('user_role')!=3) 
+		if($this->session->get('user_role')!=3)
 			$this->redirect('/login');
 	}
 	

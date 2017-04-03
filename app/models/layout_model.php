@@ -8,13 +8,13 @@ class layout_model extends \Pedetes\model {
 	}
 
 	public function getBaseData() {
-		$lang = $this->mem->get('language');
+		$lang = $this->session->get('language');
 		
 		$retVal = array();
-		$retVal['tplFile'] = $this->mem->get('url')[0];
-		$retVal['tplUserID'] = $this->mem->get('user_id');
-		$retVal['tplUserName'] = $this->mem->get('user_name');
-		$retVal['tplUserRole'] = $this->mem->get('user_role');
+		$retVal['tplFile'] = $this->session->get('url')[0];
+		$retVal['tplUserID'] = $this->session->get('user_id');
+		$retVal['tplUserName'] = $this->session->get('user_name');
+		$retVal['tplUserRole'] = $this->session->get('user_role');
 
 		if($this->_hasDB()) {
 			$i18n = $this->loadModel('i18n');
