@@ -1,0 +1,23 @@
+{
+  "name": "pedetes-www",
+  "homepage": "https://github.com/xuedi/pedetes-www",
+  "authors": [
+    "xuedi <xuedi@beijingcode.org>"
+  ],
+  "description": "basic pedetes website with bootstrap via bower",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/bower/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "fontawesome#^4.7.0",
+    "less": "^2.7.2"
+  }
+}
