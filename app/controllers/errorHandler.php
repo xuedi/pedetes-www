@@ -11,13 +11,13 @@ class errorHandler extends Pedetes\controller {
 
 	function indexAction($request) {
 		
-		// fix whatever errors occured in ($this->code)
+		// fix whatever errors occurred in ($this->code)
 		// ...
 
 
 		// default 404
 		header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
-		$this->view->render('404.tpl', true);
+		$this->view->render('404.twig', true);
 	}
 
 }

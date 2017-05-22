@@ -1,0 +1,13 @@
+{% include 'layout/header.twig' %}
+{% include 'layout/navigation.twig' with {'active': 'login'} %}
+
+<div class="container">
+    {% include 'admin/_menue.twig' with {'active': 'user'} %}
+
+	<h1>##admin_info_headline##</h1>
+	<p>
+		Administration stuff here
+	</p>
+</div>
+
+{% include 'layout/bottom.twig' %}

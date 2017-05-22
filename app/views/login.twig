@@ -1,6 +1,5 @@
-{include file='layout/top.tpl'}
-{include file='layout/navigation.tpl' active='login'}
-
+{% include 'layout/header.twig' %}
+{% include 'layout/navigation.twig' with {'active': 'login'} %}
 
 <div class="container">
 	<div class="modal-dialog">
@@ -19,5 +18,4 @@
 	</div>
 </div>
 
-
-{include file='layout/bottom.tpl'}
+{% include 'layout/bottom.twig' %}

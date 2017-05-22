@@ -7,7 +7,7 @@ class about extends Pedetes\controller {
 	}
 
 	function indexAction() {
-		$this->view->render('about.tpl', true);
+		$this->view->render('about.twig');
 	}
 
 

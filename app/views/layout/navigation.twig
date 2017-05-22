@@ -6,11 +6,11 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li {if $active=='index'}class="active"{/if}><a href="/">##home##</a></li>
-					<li {if $active=='about'}class="active"{/if}><a href="/about">##about##</a></li>
-					{if $tplUserRole==3}
-					<li {if $active=='admin'}class="active"{/if}><a href="/admin">##admin##</a></li>
-					{/if}
+					<li {% if active=='index' %}class="active"{% endif %}><a href="/">##home##</a></li>
+					<li {% if active=='about' %}class="active"{% endif %}><a href="/about">##about##</a></li>
+					{% if tplUserRole==3 %}
+					    <li {% if active=='admin' %}class="active"{% endif %}><a href="/admin">##admin##</a></li>
+					{% endif %}
 				</ul>
 				<ul class="nav navbar-nav navbar-right languageBox">
 					<li class="dropdown" >
@@ -20,23 +20,23 @@
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu" role="menu">
-						{section name=it loop=$tplLanguageList}
+                        {% for item in tplLanguageList %}
 							<li>
-								<a class="languageSwitch" id="{$tplLanguageList[it].language}" href="/ajax/language?lang={$tplLanguageList[it].language}">
+								<a class="languageSwitch" id="{$tplLanguageList[it].language}" href="/ajax/language?lang={{ item.language }}">
 									<span class="line">
 										<span class="right">
-											{$tplLanguageList[it].native}
+                                            {{ item.native }}
 										</span>
 										<span class="left">
-											{if $tplLanguageListActive == $tplLanguageList[it].language}
+											{% if tplLanguageListActive == item.language %}
 												<i class="fa fa-check"></i>
-											{/if}
-											{$tplLanguageList[it].name}
+											{% endif %}
+                                            {{ item.name }}
 										</span>
 									</span>
 								</a>
 							</li>
-						{/section}
+                        {% endfor %}
 						</ul>
 					</li>
 				</ul>

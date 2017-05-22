@@ -11,6 +11,7 @@ class layout_model extends \Pedetes\model {
 		$lang = $this->session->get('language');
 		
 		$retVal = array();
+
 		$retVal['tplFile'] = $this->session->get('url')[0];
 		$retVal['tplUserID'] = $this->session->get('user_id');
 		$retVal['tplUserName'] = $this->session->get('user_name');
@@ -26,7 +27,7 @@ class layout_model extends \Pedetes\model {
 	}
 
 	private function _hasDB() {
-		if(!isset($this->ctn['config']['database']['nodatabase'])) return true;
+		if(!isset($this->ctn['config']->getData()['database']['nodatabase'])) return true;
 		if($this->ctn['config']['database']['nodatabase']) return false;
 		return true;
 	}

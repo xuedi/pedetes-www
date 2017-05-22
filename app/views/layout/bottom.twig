@@ -1,6 +1,6 @@
 
 
-{if $footer != 'no'}
+{% if footer != 'no' %}
 <div class="navbar navbar-fixed-bottom" role="navigation">
 	<div class="container">
 		Footer text here - 
@@ -11,13 +11,16 @@
 		<a href="/terms">##footer_terms##</a>
 	</div>
 </div>
-{/if}
+{% endif %}
+
 
 
 <script src="/bower/jquery/dist/jquery.min.js"></script>
 <script src="/bower/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/bower/less/dist/less.min.js"></script>
 <script src="/javascript/global.js"></script>
+
+#pebug_bottom#
 
 </body>
 </html>

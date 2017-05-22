@@ -1,9 +1,8 @@
-{include file='layout/top.tpl'}
-{include file='layout/navigation.tpl' active='admin'}
-
+{% include 'layout/header.twig' %}
+{% include 'layout/navigation.twig' with {'active': 'login'} %}
 
 <div class="container adminFont">
-	{include file='admin/_menue.tpl' active='i18n'}
+    {% include 'admin/_menue.twig' with {'active': 'i18n'} %}
 	<form action="/admin/i18n" method="post">
 	<input type="hidden" name="action" value="save" />
 	<div class="row">
@@ -56,5 +55,4 @@
 	</form>
 </div>
 
-
-{include file='layout/bottom.tpl' footer='no'}  
+{% include 'layout/bottom.twig' %}

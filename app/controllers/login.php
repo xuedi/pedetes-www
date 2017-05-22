@@ -7,7 +7,7 @@ class login extends Pedetes\controller {
 	}
 
 	function indexAction() {
-		$this->view->render('login.tpl', true);
+		$this->view->render('login.twig', true);
 	}
 
 

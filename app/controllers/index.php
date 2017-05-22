@@ -7,7 +7,7 @@ class index extends Pedetes\controller {
 	}
 
 	function indexAction() {
-		$this->view->render('index.tpl', true);
+		$this->view->render('index.twig');
 	}
 
 	function infoAction() {
