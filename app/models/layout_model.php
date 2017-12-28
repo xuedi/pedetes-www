@@ -28,7 +28,7 @@ class layout_model extends \Pedetes\model {
 
 	private function _hasDB() {
 		if(!isset($this->ctn['config']->getData()['database']['nodatabase'])) return true;
-		if($this->ctn['config']['database']['nodatabase']) return false;
+		if($this->ctn['config']->getData()['database']['nodatabase']) return false;
 		return true;
 	}
 
