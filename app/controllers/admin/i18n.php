@@ -1,6 +1,10 @@
 <?php
 
 // used recources
+/** @var i18n_model $i18n */
+
+use Pedetes\i18n_model;
+
 $i18n = $this->loadModel('i18n');
 $lang = $this->session->get('language');
 
@@ -29,6 +33,6 @@ switch($action) {
 
 // display
 $this->view->assign("action", $action);
-$this->view->assign( "tplTranslationList", $i18n->getTranslationList($lang) );
-$this->view->render('admin/i18n.tpl', true);
+$this->view->assign( "tplTranslationList", $i18n->getTranslationList($lang));
+$this->view->render('admin/i18n.twig', true);
 

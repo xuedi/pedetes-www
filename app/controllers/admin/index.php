@@ -1,3 +1,3 @@
 <?php
 
-$this->view->render('admin/index.tpl', true);
+$this->view->render('admin/index.twig', true);

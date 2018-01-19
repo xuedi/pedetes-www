@@ -1,45 +1,59 @@
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="/">##url##</a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li {% if active=='index' %}class="active"{% endif %}><a href="/">##home##</a></li>
-					<li {% if active=='about' %}class="active"{% endif %}><a href="/about">##about##</a></li>
-					{% if tplUserRole==3 %}
-					    <li {% if active=='admin' %}class="active"{% endif %}><a href="/admin">##admin##</a></li>
-					{% endif %}
-				</ul>
-				<ul class="nav navbar-nav navbar-right languageBox">
-					<li class="dropdown" >
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-clicked="false">
-							<i class="fa fa-globe"></i> 
-							##languages## 
-							<span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu" role="menu">
-                        {% for item in tplLanguageList %}
-							<li>
-								<a class="languageSwitch" id="{$tplLanguageList[it].language}" href="/ajax/language?lang={{ item.language }}">
-									<span class="line">
-										<span class="right">
-                                            {{ item.native }}
-										</span>
-										<span class="left">
-											{% if tplLanguageListActive == item.language %}
-												<i class="fa fa-check"></i>
-											{% endif %}
-                                            {{ item.name }}
-										</span>
-									</span>
-								</a>
-							</li>
-                        {% endfor %}
-						</ul>
-					</li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div>
+<!-- Fixed navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" role="navigation">
+    <div class="container">
+
+        <a class="navbar-brand" href="/about">
+            <i class="fa fa-leaf" aria-hidden="true"></i>
+            ##navbar_home##
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">##navbar_welcome##</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/gardening">##navbar_gardening##</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/media">##navbar_media##</a>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="navbar-nav languageBox">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-globe"></i>
+                    ##languages##
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    {% for item in tplLanguageList %}
+                        <a class="languageSwitch" id="{{ item.language }}" href="/ajax/language?lang={{ item.language }}">
+                        <span class="line">
+                            <span class="right">
+                                {{ item.native }}
+                            </span>
+                            <span class="left">
+                                {% if tplLanguageListActive == item.language %}
+                                    <i class="fa fa-check"></i>
+                                {% endif %}
+                                {{ item.name }}
+                            </span>
+                        </span>
+                        </a>
+                    {% endfor %}
+                </div>
+            </li>
+        </ul>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    </div>
+</nav>
+
+

@@ -14,4 +14,4 @@ switch($action) {
 
 // others
 $this->view->assign("action", $action);
-$this->view->render('admin/user.tpl', true);
+$this->view->render('admin/user.twig', true);

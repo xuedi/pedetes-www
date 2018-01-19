@@ -1,23 +1,30 @@
-		<div class="navbar adminBar">
-			<div class="container">
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li {if $active=='index'}class="active"{/if}><a href="/admin/">##help##</a></li>
-						<li class="dropdown {if $active=='i18n'}active{/if}" >
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-clicked="false">##translations## <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="/admin/i18n">##i18n_show_entries##</a></li>
-								<li><a href="/admin/i18n?action=search">##i18n_search_new##</a></li>
-								<li><a href="/admin/i18n?action=publish">##i18n_publish##</a></li>
-								<li><a href="/admin/i18n?action=clean">##i18n_clean##</a></li>
-							</ul>
-						</li>
-						<li {if $active=='user'}class="active"{/if}><a href="/admin/user">##user##</a></li>
-						<li {if $active=='settings'}class="active"{/if}><a href="/admin/settings">##settings##</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li id="currentLanguage">Active: <span class="flag {$tplLanguageListActive}"></span></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+<nav class="adminBar navbar navbar-expand-lg navbar-light bg-light sticky-top" role="navigation">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item {% if active=='index' %}active{% endif %}"><a href="/admin/">##help##</a></li>
+                <li class="nav-item {% if active=='i18n' %}active{% endif %} dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-clicked="false">
+                        ##translations##
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="adminMenu">
+                        <li class="nav-item"><a href="/admin/i18n">##i18n_show_entries##</a></li>
+                        <li class="nav-item"><a href="/admin/i18n?action=search">##i18n_search_new##</a></li>
+                        <li class="nav-item"><a href="/admin/i18n?action=publish">##i18n_publish##</a></li>
+                        <li class="nav-item"><a href="/admin/i18n?action=clean">##i18n_clean##</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item {% if active=='user' %}active{% endif %}">
+                    <a href="/admin/user">##user##</a>
+                </li>
+                <li class="nav-item {% if active=='settings' %}active{% endif %}">
+                    <a href="/admin/settings">##settings##</a>
+                </li>
+            </ul>
+        </div>
+        <ul class="navbar-nav float-right">
+            <li id="currentLanguage">Active: <span class="flag {{ tplLanguageListActive }}"></span></li>
+        </ul>
+    </div>
+</nav>
